@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Cleaning Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center fw-bold display-6 text-primary">Office Cleaning Calculator</h1>
+
+        <form id="cleaning-form" class="row mt-5 justify-content-center">
+            <div class="col-md-6 mb-3">
+                <label for="squareFootage" class="form-label text-muted">Office Square Footage (sq. ft.):</label>
+                <input type="number" class="form-control" id="squareFootage" name="squareFootage" min="0" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="form-label text-muted">Cleaning Frequency:</label>
+                <div class="btn-group" role="group" aria-label="Cleaning frequency">
+                    <input type="radio" class="btn-check" name="frequency" id="weekly" autocomplete="off" checked required>
+                    <label class="btn btn-outline-primary" for="weekly">Weekly</label>
+
+                    <input type="radio" class="btn-check" name="frequency" id="biweekly" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="biweekly">Bi-weekly</label>
+
+                    <input type="radio" class="btn-check" name="frequency" id="monthly" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="monthly">Monthly</label>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-3">
+                <button type="submit" class="btn btn-lg btn-primary">Calculate Quote</button>
+            </div>
+        </form>
+
+        <div id="result" class="mt-5 border p-4 rounded shadow d-none">
+            </div>
+
+        <h2 class="text-center mt-5 text-muted">Pricing Guide</h2>
+        <table class="table table-hover table-striped mt-3 table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col">Square Footage</th>
+                    <th scope="col">Cleaning Cost</th>
+                    <th scope="col">Estimated Time</th>
+                    <th scope="col">Employees</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">0 - 1,000 sq. ft</td>
+                    <td>$200 - $400</td>
+                    <td>1 hour</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td scope="row">1,000 - 5,000 sq. ft</td>
+                    <td>$400 - $550</td>
+                    <td>1-2 hours</td>
+                    <td>1-2</td>
+                </tr>
+                <tr>
+                    <td scope="row">5,000 - 10,000 sq. ft</td>
+                    <td>$575 - $675</td>
+                    <td>2-3 hours</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td scope="row">10,000 - 20,000 sq. ft</td>
+                    <td>$700 - $1,150</td>
+                    <td>3-5 hours</td>
+                    <td>2-3</td>
+                </tr>
+                <tr>
+                    <td scope="row">20,000 - 30,000 sq. ft</td>
+                    <td>$1,200 - $1,600</td>
+                    <td>5-8 hours</td>
+                    <td>3-4</td>
+                </tr>
+                <tr>
+                    <td scope="row">30,000 - 40,000 sq. ft</td>
+                    <td>$1,700 - $2,200</td>
+                    <td>8-12 hours</td>
+                    <td>4-5</td>
+                </tr>
+                <tr>
+                    <td scope="row">40,000+ sq. ft</td>
+                    <td>Contact for quote</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
