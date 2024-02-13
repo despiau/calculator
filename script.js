@@ -1,6 +1,6 @@
 // Prompt for password
 let password = prompt("Please enter the password to view the calculator:");
-if (password !== "sce1912") {
+if (password !== "smart") {
     alert("Incorrect password. You will not be able to use the calculator.");
 } else {
     // The rest of your code goes here
